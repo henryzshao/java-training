@@ -2,8 +2,8 @@ import java.util.Random;
 
 public class Prompt6 {
 	public static void execute() {
-		System.out.println("--------------------------------------------------------\n"
-				+ "Prompt 6: Display a 2D Array in Matrix Format");
+		System.out.println("\n--------------------------------------------------------\n"
+				+ "Prompt 6: Display a 2D Array in Matrix Format\n");
 		Random rand = new Random();
 		int[][] intArr = new int[rand.nextInt(3)+3][rand.nextInt(3)+3];
 		

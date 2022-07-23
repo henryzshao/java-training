@@ -2,8 +2,8 @@ import java.util.Random;
 
 public class Prompt4 {
 	public static void execute() {
-		System.out.println("--------------------------------------------------------\n"
-				+ "Prompt 5: Integer Array (Odd/Even Sums)");
+		System.out.println("\n--------------------------------------------------------\n"
+				+ "Prompt 5: Integer Array (Odd/Even Sums)\n");
 		Random rand = new Random();
 		int[] intArr = new int[10];
 		for(int i = 0; i < 10; i++) {

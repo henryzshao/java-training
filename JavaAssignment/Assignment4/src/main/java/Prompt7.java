@@ -2,8 +2,8 @@ import java.util.Random;
 
 public class Prompt7 {
 	public static void execute() {
-		System.out.println("--------------------------------------------------------\n"
-				+ "Prompt 7: Pass-by-Reference and -Value");
+		System.out.println("\n--------------------------------------------------------\n"
+				+ "Prompt 7: Pass-by-Reference and -Value\n");
 		
 		Random rand = new Random();
 		Value value = new Value(Prompt4.genRandomInt(rand));

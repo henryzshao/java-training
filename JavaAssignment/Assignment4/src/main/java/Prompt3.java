@@ -1,11 +1,10 @@
 
 public class Prompt3 {
 	public static void execute() {
-		System.out.println("--------------------------------------------------------\n"
-				+ "Prompt 3: StringBuilder Methods");
+		System.out.println("\n--------------------------------------------------------\n"
+				+ "Prompt 3: StringBuilder Methods\n");
 		String str1 = new String("This is a String");
 		StringBuilder sb = new StringBuilder(str1);
-		System.out.println();
 		System.out.printf("sb:\n    %s\n", sb);
 		
 		

@@ -1,11 +1,11 @@
 
 public class Prompt2 {
 	public static void execute() {
-		System.out.println("--------------------------------------------------------\n"
-				+ "Prompt 2: StringBuffer Methods");
+		System.out.println("\n--------------------------------------------------------\n"
+				+ "Prompt 2: StringBuffer Methods\n");
+		
 		String str1 = new String("This is a String");
 		StringBuffer sb = new StringBuffer(str1);
-		System.out.println();
 		System.out.printf("sb:\n    %s\n", sb);
 		
 		

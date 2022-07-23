@@ -1,8 +1,8 @@
 
 public class Prompt1 {
 	public static void execute() {
-		System.out.println("--------------------------------------------------------\n"
-				+ "Prompt 1: String Methods");
+		System.out.println("\n--------------------------------------------------------\n"
+				+ "Prompt 1: String Methods\n");
 		String str1 = new String("This is a String");
 		String str2 = new String(" Str2 ");
 		String str3 = new String("this is a string");
