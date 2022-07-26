@@ -6,7 +6,6 @@ public class Main {
 		Prompt1.execute();
 		Prompt2.execute();
 		Prompt3.execute();
-
 	}
 
 }
