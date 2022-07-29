@@ -1,1 +1,11 @@
 /.metadata/
+/Assignment2/
+/Assignment3/
+/Assignment4/
+/Assignment5/
+/Assignment6/
+/*/*.project
+/*/*.classpath
+/*/*.prefs
+/*/.settings/
+/*/target/
