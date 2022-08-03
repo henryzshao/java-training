@@ -21,7 +21,9 @@ public class DatabaseInitialization implements ServletContextListener{
 	
 	public void contextInitialized (ServletContextEvent event) {
 		try {
-			myDriver = StartDB.registerDriver();
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Program Starting");
+			//myDriver = StartDB.registerDriver();
 			StartDB.createDatabase("day11");
 			
 			UserTable.createTable("day11");
@@ -29,13 +31,14 @@ public class DatabaseInitialization implements ServletContextListener{
 			UserCourseJunction.createTable("day11");
 			
 		} catch (ClassNotFoundException e) {
-		} catch (SQLException e) {
 		}
 	}
 	
 	public void contextDestroyed (ServletContextEvent event) {
 		StartDB.deleteDatabase("day11");
 		//StartDB.deregisterDriver(myDriver);
+		System.out.println("Deregistering Driver");
+		System.out.println("Program Ending");
 	}
 }
 
@@ -43,11 +46,12 @@ class StartDB {
 	public static Driver registerDriver() throws SQLException {
 		Driver myDriver = new com.mysql.cj.jdbc.Driver();
 		DriverManager.registerDriver(myDriver);
+		System.out.println("Registering Drivers");
 		return myDriver;
 	}
 	
 	public static void deregisterDriver(Driver myDriver) throws SQLException {
-		DriverManager.deregisterDriver(myDriver);
+		//DriverManager.deregisterDriver(myDriver);
 	}
 	
 	public static void createDatabase(String name) throws ClassNotFoundException {

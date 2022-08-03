@@ -7,37 +7,37 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/loginfinal")
+public class LoginFinalServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-
-		String user = request.getParameter("username");
+		
+		HttpSession session = request.getSession();	
+		String user = (String) session.getAttribute("username");
+		System.out.println("Login Final: " + user);
+		
 		String pass = request.getParameter("password");
+		System.out.println(user);
+		System.out.println(pass);
 
 		boolean loginSuccess = false;
 
 		loginSuccess = checkLogin(user, pass);
-		//RequestDispatcher rd;
 
 		if (loginSuccess) {
-			//rd = request.getRequestDispatcher("./welcome");
-			//rd.forward(request, response);
-			response.sendRedirect("./html/welcome.html");
+			response.sendRedirect("./welcome");
 		} else {
-			//rd = request.getRequestDispatcher("./welcomeError");
-			//rd.forward(request, response);
-			response.sendRedirect("./html/welcomefailed.html");
+			response.sendRedirect("./welcomeError");
 		}
 	}
 
